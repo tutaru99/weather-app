@@ -4,6 +4,11 @@ window.addEventListener('load', () => {
     let temperatureDegree = document.querySelector('.temperature-degree');
     let locationTimezone = document.querySelector('.location-timezone');
     let temperatureDescription = document.querySelector('.temperature-description');
+    let temperatureFeelsLike = document.querySelector('.temperature-feels');
+    let temperatureMin = document.querySelector('.temperature-min');
+    let temperatureMax = document.querySelector('.temperature-max');
+    let temperatureHumidity = document.querySelector('.temperature-humidity');
+
     let icon = document.querySelector('.icon');
 
 
@@ -26,12 +31,19 @@ window.addEventListener('load', () => {
 
                     const { temp, feels_like, temp_min, temp_max, humidity } = data.main;
                     const iconApi = `http://openweathermap.org/img/wn/${icon}@4x.png`;
+
                     //SET DOM ELEMENTS FOR API GET
                     temperatureDegree.textContent = temp;
-                    temperatureDescription.textContent = data.weather[0].description;
-                    icon.textContent = data.weather[0].icon;
+                    temperatureFeelsLike.textContent = feels_like;
+                    temperatureMin.textContent = temp_min;
+                    temperatureMax.textContent = temp_max;
+                    temperatureHumidity.textContent = humidity;
                     locationTimezone.textContent = data.sys.country;
+                    temperatureDescription.textContent = data.weather[0].description;
+
+
                     icon = data.weather[0].icon;
+                    console.log(icon);
                 });
         });
     }

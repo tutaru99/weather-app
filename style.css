@@ -16,8 +16,7 @@ body{
 }
 
 .location, .temperature{
-    height: 30vh;
-    width:50%;
+
     display: flex;
     justify-content:center;
     align-items: center;
@@ -37,4 +36,7 @@ body{
 }
 .degree-section h2{
     font-size: 40px;
+}
+h3{
+    padding: 5px 2px;
 }

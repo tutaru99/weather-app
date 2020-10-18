@@ -9,16 +9,37 @@
 </head>
 
 <body>
+    <img src="http://openweathermap.org/img/wn/04n@4x.png" height="150" alt="">
     <div class="location">
-        <h1 class="location-timezone">Timezone</h1>
-        <img class="icon" src="{{ iconAPI }}" alt="">
+        <h1 class="location-timezone">Loading timezone..</h1>
     </div>
     <div class="temperature">
         <div class="degree-section">
-            <h2 class="temperature-degree">35</h2>
-            <span>Celcius</span>
+            <h2 class="temperature-degree">Loading temp..</h2><span>C</span>
         </div>
-        <div class="temperature-description">The streets are cold dawg</div>
+        <br><br>
+        <div class="degree-section">
+            <h3>Feels like:</h3>
+            <h3 class="temperature-feels">feels</h3>
+            <h3>C</h3>
+        </div>
+        <div class="degree-section">
+            <h3>Minimum: </h3>
+            <h3 class="temperature-min">min</h3>
+            <h3>C</h3>
+        </div>
+        <div class="degree-section">
+            <h3>Max: </h3>
+            <h3 class="temperature-max">max</h3>
+            <h3>C</h3>
+        </div>
+        <div class="degree-section">
+            <h3>Humidity: </h3>
+            <h3 class="temperature-humidity">humidity</h3>
+            <h3>%</h3>
+        </div>
+        <br><br>
+        <h2 class="temperature-description">The streets are cold</h2>
     </div>
 
     <script src="skycons.js"></script>
