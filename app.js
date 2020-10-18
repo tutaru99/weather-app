@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
     let temperatureMax = document.querySelector('.temperature-max');
     let temperatureHumidity = document.querySelector('.temperature-humidity');
 
-    let icon = document.querySelector('.icon');
+    let iconApi = document.querySelector('.icon');
 
 
 
@@ -30,7 +30,6 @@ window.addEventListener('load', () => {
                     console.log(data);
 
                     const { temp, feels_like, temp_min, temp_max, humidity } = data.main;
-                    const iconApi = `http://openweathermap.org/img/wn/${icon}@4x.png`;
 
                     //SET DOM ELEMENTS FOR API GET
                     temperatureDegree.textContent = temp;
@@ -42,8 +41,9 @@ window.addEventListener('load', () => {
                     temperatureDescription.textContent = data.weather[0].description;
 
 
-                    icon = data.weather[0].icon;
-                    console.log(icon);
+                    iconApi.textContent = data.weather[0].icon;
+                    const iconApi = `http://openweathermap.org/img/wn/${iconApi}@4x.png`;
+                    console.log(iconApi);
                 });
         });
     }
