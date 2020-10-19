@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     let temperatureMax = document.querySelector('.temperature-max');
     let temperatureHumidity = document.querySelector('.temperature-humidity');
 
+    /* Fix icon queries */
     let iconApi = document.querySelector('.icon');
 
 
